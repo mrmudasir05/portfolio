@@ -30,7 +30,7 @@ export function Hero() {
             className="bg-gray-800/50 border-gray-600 text-gray-300 hover:bg-gray-700/50 backdrop-blur-sm"
             asChild
           >
-            <a href="mailto:mrmudasir05@gmail.com">
+            <a href="mrmudasir05@gmail.com">
               <Mail className="w-4 h-4 mr-2" />
               mrmudasir05@gmail.com
             </a>
