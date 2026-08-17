@@ -17,10 +17,11 @@ export function Hero() {
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-4 bg-gradient-to-r from-slate-400 to-blue-400 bg-clip-text text-transparent">
             Muhammad Mudassir Azhar
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8">Data Analyst & Machine Learning Engineer</p>
+          <p className="text-xl md:text-2xl text-gray-300 mb-8">Associate Software Engineer</p>
           <p className="text-lg text-gray-400 max-w-2xl mx-auto mb-8">
-            Recent Artificial Intelligence graduate with expertise in machine learning and data science. Experienced in
-            developing innovative AI solutions from computer vision to natural language processing systems.
+            Associate Software Engineer with 1+ year of experience building scalable AI-powered applications using FastAPI,
+            Django, AWS, Docker, Terraform, PostgreSQL, and LLMs. Experienced in developing production APIs, cloud
+            deployments, and AI-driven automation.
           </p>
         </div>
 
