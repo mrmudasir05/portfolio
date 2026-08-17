@@ -2,14 +2,17 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Muhammad Mudassir Azhar - AI Engineer & Data Analyst',
-  description: 'Portfolio of Muhammad Mudassir Azhar - AI Engineer, Machine Learning Expert, and Data Analyst from Lahore, Pakistan. Showcasing projects in computer vision, NLP, and data science.',
-  keywords: 'AI Engineer, Machine Learning, Data Science, Computer Vision, NLP, Python, React, Portfolio',
+  title: 'Muhammad Mudassir Azhar - Associate Software Engineer',
+  description: 'Portfolio of Muhammad Mudassir Azhar - Associate Software Engineer specializing in FastAPI, Django, AWS, Docker, Terraform, and AI-powered applications.',
+  keywords: 'Software Engineer, FastAPI, Django, AWS, Machine Learning, LLMs, Python, Portfolio',
   authors: [{ name: 'Muhammad Mudassir Azhar' }],
   creator: 'Muhammad Mudassir Azhar',
+  icons: {
+    icon: '/favicon.svg',
+  },
   openGraph: {
-    title: 'Muhammad Mudassir Azhar - AI Engineer Portfolio',
-    description: 'AI Engineer and Machine Learning Expert specializing in computer vision, NLP, and data analysis',
+    title: 'Muhammad Mudassir Azhar - Associate Software Engineer',
+    description: 'Associate Software Engineer building scalable AI-powered applications & cloud solutions',
     type: 'website',
     locale: 'en_US',
   },
