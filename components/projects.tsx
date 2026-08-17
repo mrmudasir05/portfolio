@@ -4,6 +4,52 @@ import { Button } from "@/components/ui/button"
 export function Projects() {
   const projects = [
     {
+      title: "Pathways (Clinical AI Decision Support System)",
+      description:
+        "Developed FastAPI backend services for AI-assisted pathology analysis, Supabase integration, and clinical workflow automation. Integrated LLM workflows, Stripe, AWS (Terraform), and PHI protection.",
+      technologies: ["FastAPI", "LLM", "AWS", "Terraform", "Stripe", "Supabase", "Healthcare AI"],
+      github: "https://github.com/mrmudasir05",
+      demo: "https://github.com/mrmudasir05",
+      image: "/images/pathways.png",
+    },
+    {
+      title: "VirtualFusion (Cybersecurity Platform)",
+      description:
+        "Built Django REST APIs powering a multi-tenant cybersecurity platform with automated AWS Fargate lab provisioning. Integrated AWS ECS/Fargate, Celery, RabbitMQ, Redis, and SSE for automated lab provisioning and real-time competition updates.",
+      technologies: ["Django", "AWS ECS/Fargate", "Celery", "RabbitMQ", "Redis", "SSE", "Docker"],
+      github: "https://github.com/mrmudasir05",
+      demo: "https://github.com/mrmudasir05",
+      image: "/images/virtualfusion.png",
+    },
+    {
+      title: "Nyquist Scholar (AI Research Platform)",
+      description:
+        "Developed scalable FastAPI REST APIs to upload documents, handle processing steps, and support backend services. Integrated AI/LLM-based chat with documents for smart paper screening and extracting key insights.",
+      technologies: ["FastAPI", "LLM", "Document AI", "RAG", "REST API"],
+      github: "https://github.com/mrmudasir05",
+      demo: "https://github.com/mrmudasir05",
+      image: "/images/nyquist-scholar.png",
+    },
+    {
+      title: "Multi-Tenant OCR & Document Intelligence SaaS",
+      description:
+        "Built a Django-based platform with async OCR pipelines, rule-based extraction, vector search (Qdrant), LLM-driven structured data extraction, and Stripe-enabled SaaS workflows.",
+      technologies: ["Django", "OCR", "Qdrant", "LLM", "Stripe", "Vector Search", "SaaS"],
+      github: "https://github.com/mrmudasir05",
+      demo: "https://github.com/mrmudasir05",
+      image: "/images/ocr-saas.png",
+    },
+    {
+      title: "AI-Powered Podcast Generator",
+      subtitle: "Sentiment & TTS Based",
+      description:
+        "Built a Streamlit app using LangChain, Groq LLM, and ElevenLabs TTS to analyze script sentiment, rewrite narration, and generate podcasts with sentiment-driven background music and audio mixing via Pydub.",
+      technologies: ["Streamlit", "LangChain", "Groq LLM", "ElevenLabs TTS", "Pydub", "NLP"],
+      github: "https://github.com/mrmudasir05",
+      demo: "https://github.com/mrmudasir05",
+      image: "/images/podcast-generator.png",
+    },
+    {
       title: "Virtual Try-On System",
       subtitle: "Final Year Project",
       description:
