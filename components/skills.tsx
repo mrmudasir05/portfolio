@@ -1,65 +1,41 @@
-import { Code, Database, Brain, BarChart3 } from "lucide-react"
+import { Code, Database, Brain, Cloud, GitBranch, BarChart3, Server, Layers } from "lucide-react"
 
 export function Skills() {
-  const skillCategories = [
-    {
-      title: "Programming",
-      icon: Code,
-      skills: ["Python (Django, FastAPI, Pandas, Sk-learn, TensorFlow)", "SQL (PostgreSQL)", "NoSQL (MongoDB)"],
-      color: "from-purple-500 to-purple-600",
-      bgColor: "bg-purple-500/10 border-purple-500/20",
-    },
-    {
-      title: "Data Science",
-      icon: BarChart3,
-      skills: ["Exploratory Data Analysis (EDA)", "Data Visualization", "Data Cleaning", "Statistical Analysis", "Data Engineering"],
-      color: "from-violet-500 to-violet-600",
-      bgColor: "bg-violet-500/10 border-violet-500/20",
-    },
-    {
-      title: "Machine Learning",
-      icon: Brain,
-      skills: ["MLOps", "Neural Networks", "NLP", "LLM Applications", "RAG Pipeline"],
-      color: "from-violet-500 to-violet-600",
-      bgColor: "bg-violet-500/10 border-violet-500/20",
-    },
-    {
-      title: "Tools & DevOps",
-      icon: Database,
-      skills: ["Git", "Docker", "Terraform", "AWS", "Kaggle"],
-      color: "from-indigo-500 to-indigo-600",
-      bgColor: "bg-indigo-500/10 border-indigo-500/20",
-    },
+  const skills = [
+    { name: "Python", icon: Code },
+    { name: "FastAPI", icon: Server },
+    { name: "Django", icon: Layers },
+    { name: "PostgreSQL", icon: Database },
+    { name: "MongoDB", icon: Database },
+    { name: "AWS", icon: Cloud },
+    { name: "Docker", icon: Layers },
+    { name: "Terraform", icon: Cloud },
+    { name: "Machine Learning", icon: Brain },
+    { name: "LLMs", icon: Brain },
+    { name: "NLP", icon: Brain },
+    { name: "Computer Vision", icon: Brain },
+    { name: "Git", icon: GitBranch },
+    { name: "Data Analysis", icon: BarChart3 },
+    { name: "RAG Pipelines", icon: Layers },
   ]
 
   return (
-    <section id="skills" className="py-20 px-4 bg-gray-800">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-4">Skills</h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-cyan-500 mx-auto"></div>
-        </div>
+    <section id="skills" className="py-24 px-4">
+      <div className="max-w-5xl mx-auto">
+        <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-16">
+          Skills & Technologies
+        </h2>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {skillCategories.map((category, index) => {
-            const IconComponent = category.icon
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+          {skills.map((skill, index) => {
+            const IconComponent = skill.icon
             return (
-              <div key={index} className={`bg-gray-900 border ${category.bgColor} rounded-lg shadow-2xl p-6`}>
-                <div
-                  className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-full flex items-center justify-center mb-4 shadow-lg`}
-                >
-                  <IconComponent className="w-8 h-8 text-white" />
-                </div>
-
-                <h3 className="text-xl font-bold text-white mb-4">{category.title}</h3>
-
-                <div className="space-y-2">
-                  {category.skills.map((skill, skillIndex) => (
-                    <div key={skillIndex} className="text-gray-300 text-sm">
-                      • {skill}
-                    </div>
-                  ))}
-                </div>
+              <div
+                key={index}
+                className="bg-[#111111] border border-gray-800 rounded-xl p-5 flex flex-col items-center gap-3 hover:border-green-400/50 hover:shadow-[0_0_15px_rgba(74,222,128,0.15)] hover:scale-105 hover:bg-[#0a0a0a] transition-all duration-300 cursor-pointer group"
+              >
+                <IconComponent className="w-8 h-8 text-gray-400 group-hover:text-green-400 transition-colors duration-300" />
+                <span className="text-gray-300 text-sm text-center font-medium group-hover:text-white transition-colors duration-300">{skill.name}</span>
               </div>
             )
           })}

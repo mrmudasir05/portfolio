@@ -1,25 +1,21 @@
 import { Hero } from "@/components/hero"
-import { About } from "@/components/about"
-import { Education } from "@/components/education"
 import { Experience } from "@/components/experience"
 import { Skills } from "@/components/skills"
 import { Projects } from "@/components/projects"
-import { Achievements } from "@/components/achievements"
+import { Education } from "@/components/education"
 import { Certifications } from "@/components/certifications"
 import { Contact } from "@/components/contact"
-import { FloatingNav } from "@/components/floating-nav"
+import { Navbar } from "@/components/navbar"
 
 export default function Portfolio() {
   return (
-    <main className="min-h-screen bg-white">
-      <FloatingNav />
+    <main className="min-h-screen bg-[#0a0a0a]">
+      <Navbar />
       <Hero />
-      <About />
-      <Education />
       <Experience />
       <Skills />
       <Projects />
-      <Achievements />
+      <Education />
       <Certifications />
       <Contact />
     </main>

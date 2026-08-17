@@ -1,4 +1,4 @@
-import { Briefcase, Calendar, MapPin } from "lucide-react"
+import { Calendar, MapPin } from "lucide-react"
 
 export function Experience() {
   const experiences = [
@@ -7,15 +7,26 @@ export function Experience() {
       company: "CodeGraphers",
       location: "Lahore, Pakistan",
       duration: "Aug 2025 – Present",
-      description: "Developed REST APIs for multiple AI-powered healthcare and enterprise applications. Dockerized backend services and deployed cloud infrastructure using AWS and Terraform. Integrated LLM workflows, Stripe, and Supabase into production systems.",
-      skills: ["FastAPI", "Django", "AWS", "Docker", "Terraform", "LLMs", "Stripe", "Supabase"],
+      bullets: [
+        "Developed REST APIs for multiple AI-powered healthcare and enterprise applications using FastAPI and Django.",
+        "Dockerized backend services and deployed cloud infrastructure using AWS and Terraform.",
+        "Integrated LLM workflows, Stripe payments, and Supabase into production systems.",
+        "Built scalable microservices architecture with event-driven patterns for high-throughput processing.",
+        "Implemented CI/CD pipelines and automated deployment workflows for multiple environments.",
+      ],
+      skills: ["FastAPI", "Django", "AWS", "Docker", "Terraform", "LLMs", "Stripe", "Supabase", "PostgreSQL"],
     },
     {
       title: "ML Engineer",
       company: "DeepEmbed",
       location: "Bahawalpur, Pakistan",
       duration: "Aug 2024 – May 2025",
-      description: "Built and evaluated machine learning models for NLP and computer vision applications. Developed RAG pipelines, embeddings, and LLM-powered AI solutions. Improved model performance through feature engineering and hyperparameter tuning.",
+      bullets: [
+        "Built and evaluated machine learning models for NLP and computer vision applications.",
+        "Developed RAG pipelines, embeddings, and LLM-powered AI solutions for document intelligence.",
+        "Improved model performance through feature engineering and hyperparameter tuning.",
+        "Created end-to-end ML pipelines from data preprocessing to model deployment.",
+      ],
       skills: ["Machine Learning", "NLP", "Computer Vision", "RAG Pipelines", "LLMs", "Feature Engineering"],
     },
     {
@@ -23,59 +34,64 @@ export function Experience() {
       company: "Enigmatix (Pvt) Limited",
       location: "Bahawalpur, Pakistan",
       duration: "May 2023 – Sep 2023",
-      description: "Developed Python automation scripts and backend utilities. Applied OOP principles to improve code maintainability.",
+      bullets: [
+        "Developed Python automation scripts and backend utilities for internal tools.",
+        "Applied OOP principles to improve code maintainability and reduce technical debt.",
+      ],
       skills: ["Python", "Automation", "OOP", "Backend Development"],
     },
   ]
 
   return (
-    <section id="experience" className="py-20 px-4 bg-gray-900">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-4">Experience</h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-cyan-500 mx-auto"></div>
-        </div>
+    <section id="experience" className="py-24 px-4">
+      <div className="max-w-4xl mx-auto">
+        <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-16">
+          Professional Experience
+        </h2>
 
-        <div className="max-w-4xl mx-auto space-y-8">
+        <div className="space-y-8">
           {experiences.map((exp, index) => (
-            <div key={index} className="bg-gray-800 border border-gray-700 rounded-lg shadow-2xl p-8">
-              <div className="flex items-start gap-6">
-                <div className="flex-shrink-0">
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-cyan-500 rounded-full flex items-center justify-center shadow-lg">
-                    <Briefcase className="w-8 h-8 text-white" />
-                  </div>
+            <div key={index} className="relative pl-8 border-l-2 border-gray-800">
+              {/* Timeline dot */}
+              <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-green-400 border-4 border-[#0a0a0a]" />
+
+              <div className="bg-[#111111] border border-gray-800 rounded-xl p-6 md:p-8">
+                {/* Header */}
+                <h3 className="text-xl md:text-2xl font-bold text-white mb-1">{exp.title}</h3>
+                <p className="text-green-400 font-medium mb-3">{exp.company}</p>
+
+                {/* Meta */}
+                <div className="flex flex-wrap gap-4 mb-6">
+                  <span className="inline-flex items-center gap-1.5 text-gray-400 text-sm bg-gray-800/50 px-3 py-1 rounded-md">
+                    <Calendar className="w-3.5 h-3.5" />
+                    {exp.duration}
+                  </span>
+                  <span className="inline-flex items-center gap-1.5 text-gray-400 text-sm bg-gray-800/50 px-3 py-1 rounded-md">
+                    <MapPin className="w-3.5 h-3.5" />
+                    {exp.location}
+                  </span>
                 </div>
 
-                <div className="flex-1">
-                  <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                    <h3 className="text-2xl font-bold text-white">{exp.title}</h3>
-                    <div className="flex items-center text-gray-400 mt-2 md:mt-0">
-                      <Calendar className="w-4 h-4 mr-2" />
-                      {exp.duration}
+                {/* Bullets */}
+                <div className="space-y-3 mb-6">
+                  {exp.bullets.map((bullet, i) => (
+                    <div key={i} className="flex gap-3">
+                      <span className="text-green-400 mt-1.5 text-xs">◆</span>
+                      <p className="text-gray-300 text-sm leading-relaxed">{bullet}</p>
                     </div>
-                  </div>
+                  ))}
+                </div>
 
-                  <div className="flex items-center text-lg text-gray-300 mb-2">
-                    <span className="font-semibold">{exp.company}</span>
-                  </div>
-
-                  <div className="flex items-center text-gray-400 mb-4">
-                    <MapPin className="w-4 h-4 mr-2" />
-                    {exp.location}
-                  </div>
-
-                  <p className="text-gray-300 mb-4">{exp.description}</p>
-
-                  <div className="flex flex-wrap gap-2">
-                    {exp.skills.map((skill) => (
-                      <span
-                        key={skill}
-                        className="bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-500/30 text-purple-300 px-3 py-1 rounded-full text-sm font-medium"
-                      >
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
+                {/* Skills */}
+                <div className="flex flex-wrap gap-2">
+                  {exp.skills.map((skill) => (
+                    <span
+                      key={skill}
+                      className="text-xs text-gray-300 bg-gray-800 border border-gray-700 px-3 py-1 rounded-md uppercase tracking-wide"
+                    >
+                      {skill}
+                    </span>
+                  ))}
                 </div>
               </div>
             </div>
