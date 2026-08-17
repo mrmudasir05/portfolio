@@ -22,22 +22,22 @@ export function About() {
           </div>
 
           <div>
-            <h3 className="text-2xl font-semibold text-white mb-6">Data Analyst & Machine Learning Engineer</h3>
+            <h3 className="text-2xl font-semibold text-white mb-6">Associate Software Engineer</h3>
             <div className="space-y-4 text-gray-300">
               <p>
-                I am a dedicated AI engineer with a strong foundation in machine learning, deep learning, and data
-                science. I recently completed my Bachelor's degree in Artificial Intelligence at The Islamia University
+                I am an Associate Software Engineer with 1+ year of experience building scalable AI-powered
+                applications. I completed my Bachelor's degree in Artificial Intelligence at The Islamia University
                 of Bahawalpur with a CGPA of 3.74/4.0.
               </p>
               <p>
-                My passion lies in developing innovative AI solutions that can make a real impact. From computer vision
-                applications to natural language processing systems, I enjoy tackling complex problems and turning ideas
-                into working solutions.
+                My expertise lies in developing production APIs, cloud deployments, and AI-driven automation using
+                FastAPI, Django, AWS, Docker, Terraform, PostgreSQL, and LLMs. I enjoy building end-to-end systems
+                that solve real-world problems at scale.
               </p>
               <p>
-                With hands-on experience gained through internships at DeepEmbed and Enigmatix, I have developed a
-                comprehensive skill set in Python programming, machine learning algorithms, and data analysis
-                techniques.
+                Currently working at CodeGraphers, I develop REST APIs for AI-powered healthcare and enterprise
+                applications, dockerize backend services, deploy cloud infrastructure using AWS and Terraform, and
+                integrate LLM workflows into production systems.
               </p>
             </div>
 
