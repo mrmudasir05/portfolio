@@ -3,20 +3,28 @@ import { Briefcase, Calendar, MapPin } from "lucide-react"
 export function Experience() {
   const experiences = [
     {
-      title: "Machine Learning Intern",
+      title: "Associate Software Engineer",
+      company: "CodeGraphers",
+      location: "Lahore, Pakistan",
+      duration: "Aug 2025 – Present",
+      description: "Developed REST APIs for multiple AI-powered healthcare and enterprise applications. Dockerized backend services and deployed cloud infrastructure using AWS and Terraform. Integrated LLM workflows, Stripe, and Supabase into production systems.",
+      skills: ["FastAPI", "Django", "AWS", "Docker", "Terraform", "LLMs", "Stripe", "Supabase"],
+    },
+    {
+      title: "ML Engineer",
       company: "DeepEmbed",
       location: "Bahawalpur, Pakistan",
-      duration: "Aug 2023 – Dec 2024",
-      description: "Gained hands-on experience with machine learning algorithms, statistics, and data analysis.",
-      skills: ["Machine Learning", "Statistics", "Data Analysis"],
+      duration: "Aug 2024 – May 2025",
+      description: "Built and evaluated machine learning models for NLP and computer vision applications. Developed RAG pipelines, embeddings, and LLM-powered AI solutions. Improved model performance through feature engineering and hyperparameter tuning.",
+      skills: ["Machine Learning", "NLP", "Computer Vision", "RAG Pipelines", "LLMs", "Feature Engineering"],
     },
     {
       title: "Python Intern",
       company: "Enigmatix (Pvt) Limited",
       location: "Bahawalpur, Pakistan",
       duration: "May 2023 – Sep 2023",
-      description: "Developed proficiency in Python programming, data structures, and OOP concepts.",
-      skills: ["Python Programming", "Data Structures", "OOP Concepts"],
+      description: "Developed Python automation scripts and backend utilities. Applied OOP principles to improve code maintainability.",
+      skills: ["Python", "Automation", "OOP", "Backend Development"],
     },
   ]
 
